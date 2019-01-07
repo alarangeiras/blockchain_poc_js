@@ -35,7 +35,7 @@ class Blockchain {
 		this.chain.push(newBlock);
 	}
 
-	isChainValid() {
+	isValid() {
 		if (this.chain.length) {
 			for (let i = 1; i < this.chain.length; i++) {
 				const currentBlock = this.chain[i];
@@ -65,7 +65,7 @@ blockchain.addBlock({amount: 3});
 blockchain.addBlock({amount: 2});
 
 console.log(JSON.stringify(blockchain, null, 4));
-console.log('check blockchain ' + blockchain.isChainValid());
+console.log('check blockchain ' + blockchain.isValid());
 blockchain.chain[1].data.amount = 100;
 blockchain.chain[1].calculateHash();
-console.log('check blockchain ' + blockchain.isChainValid());
+console.log('check blockchain ' + blockchain.isValid());
