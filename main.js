@@ -19,6 +19,7 @@ class Block {
 class Blockchain {
 	constructor() {
 		this.chain = [];
+		this.addBlock({}); //cria o bloco genesys
 	}
 
 	getLatestHash() {
